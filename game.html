@@ -1,0 +1,46 @@
+﻿<!-- Hunter Clarke, 9/8/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quark's Casino - Snake Game</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="code.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="heading">🎲 Welcome to Quark's Casino 🎲</h1>
+    
+    <!-- Navigation menu -->
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Boards.html">Boards</a></li>
+        <li><a href="game.html" aria-current="page">Snake Game</a></li>
+      </ul>
+    </nav>
+
+    <p>Use the buttons below to control the snake. Eat the food to grow!</p>
+  </header>
+
+  <!-- Game Board -->
+  <main>
+    <div id="gameBoard"></div>
+    <p id="scoreDisplay">Score: 0</p>
+
+    <!-- Form with submit buttons (no JS functions in HTML) -->
+    <form onsubmit="return false;">
+      <button type="submit" onclick="moveSnake('up')">⬆ Up</button>
+      <br />
+      <button type="submit" onclick="moveSnake('left')">⬅ Left</button>
+      <button type="submit" onclick="moveSnake('down')">⬇ Down</button>
+      <button type="submit" onclick="moveSnake('right')">➡ Right</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quark's Casino</p>
+  </footer>
+</body>
+</html>
