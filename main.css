@@ -1,0 +1,61 @@
+/* General styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: navy;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Layout */
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #001f3f;
+}
+
+main {
+    margin: 2rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffcc00;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    nav a:hover {
+        color: #ffffff;
+    }
+
+    nav a[aria-current="page"] {
+        border-bottom: 2px solid #ffcc00;
+    }
+
+/* Images */
+#memeImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+}

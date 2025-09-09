@@ -1,27 +1,34 @@
-﻿<!--Hunter Clarke, 9/8/25-->
-<!--Doctype tells the browser that this is an HTML5 page.
-  -->
+﻿<!-- Hunter Clarke, 9/8/25 -->
 <!DOCTYPE html>
-<!--Html tag goes here-->
-<html>
-<!--Domain info here in the head-->
+<html lang="en">
+
 <head>
-    <title>
-        CSC 102 - Indexpage
-    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSC 102 - Index Page</title>
+    <link rel="stylesheet" href="main.css" />
 </head>
 
-<!--What the user sees goes in the body.-->
 <body>
-    <h1>Welcome to my Index page.</h1>
-   <!--P is Paragraph. duh.-->
-    <p>
-        <!--img is image tag. duh.-->
-        <img id="memeImage" src="meme.jpg" />
-    </p>
+    <header>
+        <h1>Welcome to my Index Page</h1>
+        <nav>
+            <ul>
+                <li><a href="Index.html" aria-current="page">Home</a></li>
+                <li><a href="Boards.html">Boards</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <figure>
+            <img id="memeImage" src="meme.jpg" alt="A funny meme image" />
+        </figure>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hunter Clarke</p>
+    </footer>
 </body>
-
-
 
 </html>
