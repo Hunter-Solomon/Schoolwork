@@ -1,0 +1,64 @@
+<!-- Hunter Clarke, 9/18/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Set character encoding -->
+  <meta charset="UTF-8" />
+  <!-- Make it mobile-friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title -->
+  <title>String Validation Demo</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="main.css" />
+  <!-- Link to JavaScript file -->
+  <script src="strings.js"></script>
+  <!-- Google Font for creative element -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Page header -->
+  <header>
+    <h1 id="heading">🔐 Welcome to the Secret Message Portal 🔐</h1>
+    <p>Fill in your information below to unlock the hidden message!</p>
+  </header>
+
+  <!-- Main section with form -->
+  <main>
+    <!-- Form to hold text boxes -->
+    <form onsubmit="return validateForm();">
+      <!-- First name input -->
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required />
+      <br /><br />
+
+      <!-- Last name input -->
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required />
+      <br /><br />
+
+      <!-- Zip code input -->
+      <label for="zipCode">Zip Code:</label>
+      <input type="text" id="zipCode" name="zipCode" required />
+      <br /><br />
+
+      <!-- Submit button -->
+      <button type="submit">Reveal Secret</button>
+    </form>
+
+    <!-- Where messages will display -->
+    <p id="outputMessage"></p>
+
+    <!-- Creative element: fun image -->
+    <img src="lock.jpg" 
+         alt="Secret lock image" 
+         width="150" />
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hunter Clarke</p>
+  </footer>
+</body>
+</html>
