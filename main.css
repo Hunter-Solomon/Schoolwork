@@ -59,3 +59,51 @@ footer {
     font-size: 0.9rem;
     color: #cccccc;
 }
+
+/* Background for creative effect */
+body {
+  background: radial-gradient(circle at top, #001f3f, #000);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Meme image styling */
+#memeImage {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 150px;
+  height: auto;
+  transition: all 0.5s ease; /* Smooth movement */
+}
+
+/* Buttons */
+button {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Status message styling */
+#statusMessage {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #ffcc00;
+}
