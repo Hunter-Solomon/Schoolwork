@@ -1,34 +1,56 @@
-﻿<!-- Hunter Clarke, 9/8/25 -->
+<!-- Hunter Clarke, 9/25/25 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSC 102 - Index Page</title>
-    <link rel="stylesheet" href="main.css" />
+  <!-- Define character set -->
+  <meta charset="utf-8" />
+  <!-- Set viewport for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Page title -->
+  <title>CSC 102 - Moving Meme</title>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="main.css" />
+  <!-- Link to JavaScript logic -->
+  <script src="move.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to my Index Page</h1>
-        <nav>
-            <ul>
-                <li><a href="Index.html" aria-current="page">Home</a></li>
-                <li><a href="Boards.html">Boards</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Page header -->
+  <header>
+    <h1>🎬 Moving Meme Madness 🎬</h1>
+    <p>Click Start to see the meme move around the screen!</p>
+  </header>
 
-    <main>
-        <figure>
-            <img id="memeImage" src="meme.jpg" alt="A funny meme image" />
-        </figure>
-    </main>
+  <!-- Navigation menu (same style as other pages) -->
+  <nav>
+    <ul>
+      <li><a href="Index.html" aria-current="page">Home</a></li>
+      <li><a href="Boards.html">Boards</a></li>
+      <li><a href="game.html">Snake Game</a></li>
+      <li><a href="strings.html">Secret Message</a></li>
+    </ul>
+  </nav>
 
-    <footer>
-        <p>&copy; 2025 Hunter Clarke</p>
-    </footer>
+  <!-- Main content -->
+  <main>
+    <!-- Meme image that will move around -->
+    <img id="memeImage" src="meme.jpg" alt="Funny meme" />
+
+    <!-- Form containing Start and Stop buttons -->
+    <form onsubmit="return false;">
+      <!-- Start Button: starts movement -->
+      <button type="submit" id="startBtn" onclick="startMovement()">Start</button>
+      <!-- Stop Button: stops movement -->
+      <button type="submit" id="stopBtn" onclick="stopMovement()" disabled>Stop</button>
+    </form>
+
+    <!-- Area for messages or validation -->
+    <p id="statusMessage"></p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hunter Clarke</p>
+  </footer>
 </body>
-
 </html>
