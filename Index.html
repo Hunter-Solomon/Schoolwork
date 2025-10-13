@@ -2,53 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Define character set -->
   <meta charset="utf-8" />
-  <!-- Set viewport for mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Page title -->
   <title>CSC 102 - Moving Meme</title>
-  <!-- Link to CSS file -->
   <link rel="stylesheet" href="main.css" />
-  <!-- Link to JavaScript logic -->
   <script src="move.js"></script>
 </head>
 
 <body>
-  <!-- Page header -->
   <header>
     <h1>🎬 Moving Meme Madness 🎬</h1>
     <p>Click Start to see the meme move around the screen!</p>
   </header>
 
-  <!-- Navigation menu (same style as other pages) -->
+  <!-- Navigation Menu -->
   <nav>
     <ul>
       <li><a href="Index.html" aria-current="page">Home</a></li>
       <li><a href="Boards.html">Boards</a></li>
-      <li><a href="game.html">Snake Game</a></li>
-      <li><a href="strings.html">Secret Message</a></li>
+      <li><a href="Game.html">Snake Game</a></li>
+      <li><a href="Strings.html">Secret Message</a></li>
+      <li><a href="Palindrome.html">Palindrome Checker</a></li>
     </ul>
   </nav>
 
-  <!-- Main content -->
   <main>
-    <!-- Meme image that will move around -->
-    <img id="memeImage" src="meme.jpg" alt="Funny meme" />
+    <img id="memeImage" src="Meme.jpg.png" alt="Funny meme" />
 
-    <!-- Form containing Start and Stop buttons -->
     <form onsubmit="return false;">
-      <!-- Start Button: starts movement -->
       <button type="submit" id="startBtn" onclick="startMovement()">Start</button>
-      <!-- Stop Button: stops movement -->
       <button type="submit" id="stopBtn" onclick="stopMovement()" disabled>Stop</button>
     </form>
 
-    <!-- Area for messages or validation -->
     <p id="statusMessage"></p>
   </main>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Hunter Clarke</p>
   </footer>
