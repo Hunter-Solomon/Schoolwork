@@ -1,109 +1,387 @@
-/* General styling */
+/* Hunter Clarke - CSC 102 Project */
+/* Responsive and accessible styling for all devices */
+
+/* General styling with better readability */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: navy;
-    color: white;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, #c6ffdd, #fbd786, #f7797d);
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+  font-size: 18px;
+  overflow: auto;
+  min-height: 100vh;
 }
 
-/* Layout */
-header, footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #001f3f;
+/* Header with better contrast */
+header {
+  background-color: rgba(0, 31, 63, 0.95);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-main {
-    margin: 2rem;
+header h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Navigation */
+header p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #ffcc00;
+}
+
+/* Responsive Navigation */
+nav {
+  background-color: rgba(0, 15, 30, 0.9);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav li {
+  margin: 0;
 }
 
 nav a {
-    text-decoration: none;
-    color: #ffcc00;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+  display: block;
+  border-radius: 8px;
+  background-color: rgba(255, 204, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 120px;
+  text-align: center;
 }
 
-    nav a:hover {
-        color: #ffffff;
-    }
+nav a:hover {
+  background-color: #ffcc00;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    nav a[aria-current="page"] {
-        border-bottom: 2px solid #ffcc00;
-    }
+nav a[aria-current="page"] {
+  background-color: #ffcc00;
+  color: #000;
+  border: 2px solid #fff;
+}
+
+/* Main content area */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  min-height: 60vh;
+}
+
+/* Better text contrast */
+main h1, main h2, main h3 {
+  color: #001f3f;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+main p, main li {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
 
 /* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
+}
+
 #memeImage {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    margin: 1rem auto;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  width: 150px;
+  height: auto;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+/* Forms with better accessibility */
+form {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  font-weight: bold;
+  color: #001f3f;
+  font-size: 1.1rem;
+}
+
+input[type="text"] {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 2px solid #001f3f;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0.5rem 0;
+  background-color: white;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+
+/* Buttons with better touch targets */
+button, input[type="submit"] {
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0.75rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #ffa500;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+button:active, input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Snake Game Board */
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #000;
+  border-radius: 8px;
+  width: fit-content;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.snake {
+  background-color: #00ff00;
+  border-radius: 4px;
+}
+
+.food {
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+
+#scoreDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #001f3f;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Messages with better visibility */
+#statusMessage, #outputMessage, #message {
+  margin: 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #001f3f;
+  padding: 1rem;
+  background-color: rgba(255, 204, 0, 0.2);
+  border-radius: 8px;
+  min-height: 3rem;
 }
 
 /* Footer */
 footer {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #cccccc;
-}
-
-/* Background for creative effect */
-body {
-  background: radial-gradient(circle at top, #001f3f, #000);
+  background-color: rgba(0, 31, 63, 0.95);
   color: white;
-  font-family: 'Arial', sans-serif;
   text-align: center;
-  overflow: hidden;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
 }
 
-/* Meme image styling */
-#memeImage {
-  position: absolute;
-  top: 100px;
-  left: 100px;
-  width: 150px;
-  height: auto;
-  transition: all 0.5s ease; /* Smooth movement */
-}
-
-/* Buttons */
-button {
-  background-color: gold;
-  color: black;
-  font-weight: bold;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
+/* Program Outcomes Section */
+section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  margin: 1rem 0;
 }
 
-button:hover {
-  background-color: orange;
-}
-
-button:disabled {
-  background-color: gray;
-  cursor: not-allowed;
-}
-
-/* Status message styling */
-#statusMessage {
-  margin-top: 1rem;
+section ol {
+  text-align: left;
+  line-height: 2;
   font-size: 1.1rem;
-  color: #ffcc00;
+  color: #2c3e50;
+}
+
+section li {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE/TABLET */
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  nav a {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  main {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  button, input[type="submit"] {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  #gameBoard {
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+  }
+  
+  .cell {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  header {
+    padding: 1rem;
+  }
+  
+  header h1 {
+    font-size: 1.3rem;
+  }
+  
+  header p {
+    font-size: 0.95rem;
+  }
+  
+  nav {
+    padding: 0.5rem;
+  }
+  
+  nav a {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+  
+  main {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  label {
+    font-size: 1rem;
+  }
+  
+  input[type="text"] {
+    padding: 0.625rem;
+    font-size: 0.95rem;
+  }
+  
+  button, input[type="submit"] {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+  
+  #gameBoard {
+    grid-template-columns: repeat(10, 25px);
+    grid-template-rows: repeat(10, 25px);
+  }
+  
+  .cell {
+    width: 25px;
+    height: 25px;
+  }
+  
+  #memeImage {
+    width: 100px;
+  }
 }
