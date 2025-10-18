@@ -107,5 +107,4 @@ function resetGame(message) {
   drawBoard();
 }
 
-// Draw first board
-drawBoard();
+// Note: drawBoard() is called from body onload in HTML
