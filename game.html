@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quark's Casino - Snake Game</title>
   <link rel="stylesheet" href="main.css" />
+  <script src="sound.js"></script>
   <script src="code.js"></script>
 </head>
-<body>
+<body onload="enableSound(); drawBoard();">
   <header>
     <h1 id="heading">🎲 Welcome to Quark's Casino 🎲</h1>
 
@@ -23,7 +24,7 @@
       </ul>
     </nav>
 
-    <p>Use the buttons below to control the snake. Eat the food to grow!</p>
+    <p>Use arrow keys or buttons below to control the snake. Eat the red food to grow!</p>
   </header>
 
   <!-- Game Board -->
@@ -31,14 +32,18 @@
     <div id="gameBoard"></div>
     <p id="scoreDisplay">Score: 0</p>
 
-    <!-- Form with submit buttons (no JS functions in HTML) -->
-    <form onsubmit="return false;">
-      <button type="submit" onclick="moveSnake('up')">⬆ Up</button>
-      <br />
-      <button type="submit" onclick="moveSnake('left')">⬅ Left</button>
-      <button type="submit" onclick="moveSnake('down')">⬇ Down</button>
-      <button type="submit" onclick="moveSnake('right')">➡ Right</button>
-    </form>
+    <!-- D-Pad Control Buttons -->
+    <div class="game-controls">
+      <div class="dpad">
+        <button class="dpad-btn up" onclick="moveSnake('up')">⬆</button>
+        <div class="dpad-middle">
+          <button class="dpad-btn left" onclick="moveSnake('left')">⬅</button>
+          <div class="dpad-center"></div>
+          <button class="dpad-btn right" onclick="moveSnake('right')">➡</button>
+        </div>
+        <button class="dpad-btn down" onclick="moveSnake('down')">⬇</button>
+      </div>
+    </div>
   </main>
 
   <footer>
