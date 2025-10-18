@@ -1,0 +1,45 @@
+<!-- Hunter Solomon, 10/18/25 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soldier Training Simulator</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="training.js"></script>
+</head>
+<body onload="enableSound()">
+  <header>
+    <h1>🪖 Soldier Training Simulator</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="Boards.html">Boards</a></li>
+        <li><a href="Game.html">Snake Game</a></li>
+        <li><a href="Strings.html">Secret Message</a></li>
+        <li><a href="Palindrome.html">Palindrome Checker</a></li>
+        <li><a href="Training.html" aria-current="page">Training</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Train your soldier for battle</h2>
+    <form onsubmit="return startTraining();">
+      <label for="name">Enter Soldier Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="stamina">Enter Starting Stamina (1–100):</label>
+      <input type="number" id="stamina" min="1" max="100" required />
+
+      <button type="submit">Start Training</button>
+    </form>
+
+    <p id="output"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Hunter Solomon</p>
+  </footer>
+</body>
+</html>
