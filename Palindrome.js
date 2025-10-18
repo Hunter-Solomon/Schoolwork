@@ -1,4 +1,4 @@
- // Author: Hunter Clarke
+// Author: Hunter Clarke
 // Description: Checks if a word or phrase is a palindrome using innerHTML
 
 // Get form and message area from HTML
